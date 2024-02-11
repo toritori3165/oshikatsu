@@ -1,0 +1,14 @@
+<div class='main'>
+  <div class='show'>
+    <%= @order.group %>
+    <%= @order.content %>
+    <%= @order.payment %>
+    <%= @order.event_day %>
+    <%= @order.date_of_payment %>
+    <% @order.order_users.each do |order_user| %>
+      <%= order_user.user.nickname %>
+    <% end %>
+    <%= link_to "編集", edit_order_path(@order.id), method: :get, class: "order_edit_btn" %>
+    <%= link_to "削除", order_path(@order.id), data: {turbo_method: :delete}, class: "order-destroy" %>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class='main'>
+  <div class='top'>
+    <div class='user_name'><%= "#{current_user.nickname}の購入履歴" %></div>
+
+    <%= form_with(url: search_orders_path, local: true, method: :get, class: "search-form") do |form| %>
+      <%= form.text_field :search, placeholder: "グループを検索する", class: "search-input" %>
+      <%= form.submit "検索", class: "search-btn" %>
+    <% end %>
+  </div>  
+
+  <%= month_calendar(events: @orders) do |date, orders| %>
+
+
+    <%= date.day %>
+
+    <% orders.each do |order| %>
+      <div>
+        <%= link_to order.group, order_path(order.id) %>
+        <% if order.date_of_payment.blank? %>
+        <%= "精算済" %>
+        <% else %>
+        <p class= 'payment_notice'>精算日<%= order.date_of_payment %></p>
+        <% end %>
+      </div>
+    <% end %>
+
+  <% end %>

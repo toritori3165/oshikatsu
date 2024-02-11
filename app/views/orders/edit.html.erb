@@ -1,0 +1,19 @@
+<div class='main'>
+<%= form_with model: @order,local: true do |f| %>
+  <%= f.text_field :group, class:"group-text", id:"group-name", placeholder:"グループ名", maxlength:"40" %>
+  <%= f.text_area :content, class:"content-text", id:"content-info", placeholder:"商品内訳、金額など" %>
+  <%= f.text_area :payment, class:"payment-text", id:"payment-info", placeholder:"お金の回収方法などについて" %>
+  <%= f.label :event_day, "購入日orイベント日" %><br>
+  <%= f.date_field :event_day %>
+  <%= f.label :date_of_payment, "お金の回収日" %><br>
+  <%= f.date_field :date_of_payment %>
+  <%= f.label :user_ids, "一緒に購入した人" %><br>
+  <%= f.collection_check_boxes :user_ids, User.where.not(id: current_user.id), :id, :nickname do |user|%>>
+    <%= user.label do %>
+      <%= user.check_box %> <%= user.object.nickname %>
+    <% end %>
+  <% end %>
+  <input name="order[user_ids][]" type="hidden" value="<%= current_user.id %>">
+  <%= f.submit "追加", class: 'order-btn'%>
+<% end %>
+</div>

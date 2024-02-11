@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Oshikatsu</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header class="header">
+      <%= link_to "Oshikatsu", root_path, class: "Oshikatsu" %>
+      <% if user_signed_in? %>
+        <div class="user_navi">
+          <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: "navi_btn" %>
+          <%= link_to "購入品追加", new_order_path, class: "navi_btn" %>
+        </div>
+      <% else %>
+        <div class="user_navi">
+          <%= link_to "ログイン", new_user_session_path, class: "navi_btn" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "navi_btn" %>
+        </div>
+      <% end %>
+    </header>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<div class='main'>
+<div class='user_name'><%= "#{current_user.nickname}の購入履歴" %></div>
+
+<% @orders.each do |order| %>
+  <%= link_to order.group, order_path(order.id) %>
+  <% if order.date_of_payment.blank? %>
+    <%= "お金回収済" %>
+    <% else %>
+    <p class= 'payment_notice'>お金の回収日<%= order.date_of_payment %></p>
+  <% end %>
+  <%= link_to "削除", order_path(order.id), data: {turbo_method: :delete}, class: "order-destroy" %>
+<% end %>
+</div>

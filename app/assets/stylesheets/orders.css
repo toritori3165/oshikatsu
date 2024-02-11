@@ -1,0 +1,81 @@
+/*****header*****/
+
+.header {
+  width: calc(100vw - 100px);
+  height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #dcecec;
+}
+
+.Oshikatsu {
+  font-size: 23px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #50b5b5;
+}
+
+.user_navi{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navi_btn{
+  background-color: #fff;
+  color: #5a5a5a;
+  border-radius: 5%;
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px;
+}
+
+/*****main*****/
+
+.main{
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.top{
+  text-align: center;
+}
+
+
+
+/*****form*****/
+
+.form{
+  text-align: center;
+}
+/*.form input,
+.form textarea,
+.form select {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px; 
+}
+.form label {
+  display: block;
+  margin-bottom: 5px; 
+}
+
+/*****calendar*****/
+
+.simple-calendar {
+  padding: 50px 50px;
+  width: 1200px;
+  table-layout: fixed;
+}
+
+/*****show*****/
+.show{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
