@@ -5,8 +5,6 @@ class Order < ApplicationRecord
 
   with_options presence: true do
     validates :group
-    validates :content
-    validates :payment
   end
 
   def start_time

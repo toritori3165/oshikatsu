@@ -21,9 +21,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_06_084936) do
   end
 
   create_table "orders", charset: "utf8", force: :cascade do |t|
-    t.text "group", null: false
-    t.text "content", null: false
-    t.text "payment", null: false
+    t.string "group", null: false
+    t.string "content_name"
+    t.string "event_name"
+    t.string "price"
+    t.text "memo"
     t.date "event_day"
     t.date "date_of_payment"
     t.datetime "created_at", null: false

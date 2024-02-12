@@ -13,9 +13,11 @@ has_many :orders, through: :order_users
 ## ordersテーブル
 | Column         |Type   |Options     |
 |----------------|-------|------------|
-|group           |text   |null: false |
-|content         |text   |null: false |
-|payment         |text   |null: false |
+|group           |string |null: false |
+|content_name    |string |            |
+|event_name      |string |            |
+|price           |string |            |
+|memo            |text   |            |
 |event_day       |date   |            |
 |date_of_payment |date   |            |
 
