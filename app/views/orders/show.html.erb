@@ -1,8 +1,10 @@
 <div class='main'>
   <div class='show'>
     <%= @order.group %>
-    <%= @order.content %>
-    <%= @order.payment %>
+    <%= @order.content_name %>
+    <%= @order.event_name %>
+    <%= @order.price %>
+    <%= @order.memo %>
     <%= @order.event_day %>
     <%= @order.date_of_payment %>
     <% @order.order_users.each do |order_user| %>

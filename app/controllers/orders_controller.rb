@@ -52,7 +52,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:group, :content, :payment, :date_of_payment, :event_day, user_ids: [])
+    params.require(:order).permit(:group, :content_name, :event_name, :price, :memo, :date_of_payment, :event_day, user_ids: [])
   end
 
   def set_order
