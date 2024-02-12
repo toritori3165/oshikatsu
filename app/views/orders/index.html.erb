@@ -6,22 +6,18 @@
       <%= form.text_field :search, placeholder: "グループを検索する", class: "search-input" %>
       <%= form.submit "検索", class: "search-btn" %>
     <% end %>
-  </div>  
+   
 
-  <%= month_calendar(events: @orders) do |date, orders| %>
+    <input type="checkbox" id="toggle-calendar-b">
+    <label for="toggle-calendar-b">公演カレンダー</label>
+  </div> 
+  <div id="calendar-a">
+    <%= render partial: 'calendar-a', locals: {orders_a: @orders_a} %>
+  </div>
+
+  <div id="calendar-b" style="display: none;">
+    <%= render partial: 'calendar-b', locals: {orders_b: @orders_b} %>
+  </div>
 
 
-    <%= date.day %>
-
-    <% orders.each do |order| %>
-      <div>
-        <%= link_to order.group, order_path(order.id) %>
-        <% if order.date_of_payment.blank? %>
-        <%= "精算済" %>
-        <% else %>
-        <p class= 'payment_notice'>精算日<%= order.date_of_payment %></p>
-        <% end %>
-      </div>
-    <% end %>
-
-  <% end %>
+</div> 

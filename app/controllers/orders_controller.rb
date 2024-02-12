@@ -3,7 +3,8 @@ class OrdersController < ApplicationController
   before_action :set_order, only: [:edit, :show, :update]
 
   def index
-    @orders = current_user.orders
+    @orders_a = current_user.orders.where.not(content_name: "")
+    @orders_b = current_user.orders.where.not(event_name: "")
   end  
 
   def new
