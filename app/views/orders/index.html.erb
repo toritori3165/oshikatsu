@@ -2,7 +2,7 @@
   <div class='top'>
     <div class='user_name'><%= "#{current_user.nickname}の購入履歴" %></div>
 
-    <%= form_with(url: search_orders_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form_with(url: search_orders_path, local: true, method: :get, data: { turbo: false }, class: "search-form") do |form| %>
       <%= form.text_field :search, placeholder: "グループを検索する", class: "search-input" %>
       <%= form.submit "検索", class: "search-btn" %>
     <% end %>
