@@ -40,42 +40,240 @@
   width: 100vw;
   height: 100vh;
   background-color: #fff;
+  color: #5a5a5a;
 }
+
 
 .top{
   text-align: center;
 }
 
+.user_name{
+  margin: 10px;
+  font-size: 20px;
+}
 
+.search-form{
+  margin: 10px;
+}
+
+.order_path_btn{
+  color: #5a5a5a;
+}
 
 /*****form*****/
 
 .form{
-  text-align: center;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/*.form input,
-.form textarea,
-.form select {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 10px; 
+
+.group-text{
+  width: 430px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.form label {
-  display: block;
-  margin-bottom: 5px; 
+
+.content_event_name{
+  width: 474px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.event_name{
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.content_name{
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.price{
+  width: 430px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memo{
+  width: 430px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event_day{
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+}
+
+.date_of_payment{
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+}
+
+.order-btn{
+  color: #5a5a5a;
+  background-color: #fff;
+  border: 1px solid #5a5a5a;
+  padding: 1px 2px;
+  
 }
 
 /*****calendar*****/
 
 .simple-calendar {
-  padding: 50px 50px;
-  width: 1200px;
+  width: 80%;
+  margin: 10px auto;
   table-layout: fixed;
+}
+
+.calendar-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Previous_btn{
+  margin-right: 5px;
+  color: #5a5a5a;
+  text-decoration: none;
+
+}
+
+.Next_btn{
+  margin-left: 5px;
+  color: #5a5a5a;
+  text-decoration: none;
+
 }
 
 /*****show*****/
 .show{
+ width: 470px;
+ margin: auto;
+}
+
+.order_group{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5px;
+}
+
+.order_content_name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.order_event_name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.order_price{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.order_memo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.order_event_day{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.order_date_of_payment{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.order_user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.order_edit_btn{
+  color: #5a5a5a;
+  margin-right: 5px;
+}
+
+.order-destroy{
+  color: #5a5a5a;
+  margin-left: 5px;
+}
+
+/*****search*****/
+
+.user_name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search_order{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.order_user{
+  margin: 0 10px;
+}
+
+.show_btn{
+  color: #5a5a5a;
+  margin: 5px 10px;
+}
+
+.search-destroy{
+  color: #5a5a5a;
+  margin: 5px 10px;
 }

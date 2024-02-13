@@ -1,16 +1,36 @@
 <div class='main'>
   <div class='show'>
-    <%= @order.group %>
-    <%= @order.content_name %>
-    <%= @order.event_name %>
-    <%= @order.price %>
-    <%= @order.memo %>
-    <%= @order.event_day %>
-    <%= @order.date_of_payment %>
+    <div class="order_group"><%= "グループ名：#{@order.group}" %></div>
+    <div class="order_content_name">
+      <% if @order.content_name.present? %>
+        <%= "商品名：#{@order.content_name}" %>
+      <% end %>
+    </div>
+    <div class="order_event_name">
+      <% if @order.event_name.present? %>
+        <%= "公演名：#{@order.event_name}" %>
+      <% end %>
+    </div>
+    <div class="order_price"><%= "金額：#{@order.price}"%></div>
+    <div class="order_memo">
+      <% if @order.memo.present? %>
+        <%= "メモ：#{@order.memo}" %>
+      <% end %>
+    </div>
+    <div class="order_event_day"><%= "購入日orイベント日：#{@order.event_day}" %></div>
+    <div class="order_date_of_payment">
+      <% if @order.date_of_payment.present? %>
+        <%= "精算日：#{@order.date_of_payment}" %>
+      <% end %>
+    </div>
+    <div class="order_user">共同購入者：
     <% @order.order_users.each do |order_user| %>
       <%= order_user.user.nickname %>
     <% end %>
-    <%= link_to "編集", edit_order_path(@order.id), method: :get, class: "order_edit_btn" %>
-    <%= link_to "削除", order_path(@order.id), data: {turbo_method: :delete}, class: "order-destroy" %>
+    </div>
+    <div class="btns">
+      <%= link_to "編集", edit_order_path(@order.id), method: :get, class: "order_edit_btn" %>
+      <%= link_to "削除", order_path(@order.id), data: {turbo_method: :delete}, class: "order-destroy" %>
+    </div>
   </div>
 </div>

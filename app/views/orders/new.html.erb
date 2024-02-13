@@ -1,15 +1,18 @@
 <div class='main'>
-  <div class='form'>
+  <div class="form">
     <%= form_with model: @order,local: true do |f| %>
       <%= f.text_field :group, class:"group-text", id:"group-name", placeholder:"グループ名", maxlength:"40" %>
+      <div class="content_event_name">
       <%= f.text_field :content_name, class:"content_name", id:"content-info", placeholder:"商品内" %>
+      <%= "or" %>
       <%= f.text_field :event_name, class:"event_name", id:"content-info", placeholder:"公演名" %>
+      </div>
       <%= f.text_field :price, class:"price", id:"price-info", placeholder:"金額" %>
       <%= f.text_area :memo, class:"memo", id:"memo-info", placeholder:"メモ" %>
       <%= f.label :event_day, "購入日orイベント日" %><br>
-      <%= f.date_field :event_day %>
+      <%= f.date_field :event_day,  class:"event_day" %>
       <%= f.label :date_of_payment, "精算日" %><br>
-      <%= f.date_field :date_of_payment %>
+      <%= f.date_field :date_of_payment, class:"date_of_payment" %>
       <%= f.label :user_ids, "一緒に購入した人" %><br>
       <%= f.collection_check_boxes :user_ids, User.where.not(id: current_user.id), :id, :nickname do |user|%>>
         <%= user.label do %>
@@ -19,5 +22,5 @@
       <input name="order[user_ids][]" type="hidden" value="<%= current_user.id %>">
       <%= f.submit "追加", class: 'order-btn'%>
     <% end %>
-    
+  </div>
 </div>
