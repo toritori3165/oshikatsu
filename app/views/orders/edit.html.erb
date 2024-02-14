@@ -1,11 +1,11 @@
 <div class='main'>
   <div class="form">
-    <%= form_with model: @order,local: true do |f| %>
+    <%= form_with model: @order,local: true, data: { turbo: false } do |f| %>
       <%= f.text_field :group, class:"group-text", id:"group-name", placeholder:"グループ名", maxlength:"40" %>
       <div class="content_event_name">
       <%= f.text_field :content_name, class:"content_name", id:"content-info", placeholder:"商品内" %>
       <%= "or" %>
-      <%= f.text_field :event_name, class:"event_name", id:"content-info", placeholder:"公演名" %>
+      <%= f.text_field :event_name, class:"event_name", id:"event-info", placeholder:"公演名" %>
       </div>
       <%= f.text_field :price, class:"price", id:"price-info", placeholder:"金額" %>
       <%= f.text_area :memo, class:"memo", id:"memo-info", placeholder:"メモ" %>
