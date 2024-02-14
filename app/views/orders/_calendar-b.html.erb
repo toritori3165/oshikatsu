@@ -6,9 +6,12 @@
 
     <% orders.each do |order| %>
         <%= link_to order.group, order_path(order.id), data: { turbo: false }, class: "order_path_btn" %>
-        <% order.order_users.each do |order_user| %>
+        <p><%= order.price%></p>
+        <p><%= order.event_name%></p>
+        <p><% order.order_users.each do |order_user| %>
           <%= order_user.user.nickname %>
         <% end %>
+        </p>
     <% end %>
 
   <% end %>
