@@ -12,7 +12,7 @@
         <% else %>
         <p class= 'payment_notice'>精算日<%= order.date_of_payment %></p>
         <% end %>
-        <p><% order.order_users.each do |order_user| %>
+        <p><% order.order_users.reject { |order_user| order_user.user == current_user }.each do |order_user| %>
           <%= order_user.user.nickname %>
         <% end %></p>
     <% end %>
