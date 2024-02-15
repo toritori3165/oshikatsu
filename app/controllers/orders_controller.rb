@@ -43,7 +43,7 @@ class OrdersController < ApplicationController
 
   def search
     if params[:search].present?
-      @orders = current_user.orders.where('`group` LIKE ?', "%#{params[:search]}%")
+      @orders = current_user.orders.where('orders.group LIKE ?', "%#{params[:search]}%")
     else
       @orders = current_user.orders
     end
