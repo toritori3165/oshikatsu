@@ -76,3 +76,7 @@ gem 'devise'
 gem "simple_calendar", "~> 2.4"
 
 gem 'sassc'
+
+group :production do
+  gem 'pg'
+end
