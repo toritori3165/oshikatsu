@@ -20,7 +20,7 @@
     <div class="order_event_day"><%= "購入日orイベント日：#{@order.event_day}" %></div>
     <div class="order_date_of_payment">
       <% if @order.date_of_payment.present? %>
-        <%= "精算日：#{@order.date_of_payment}" %>
+        <%= "清算日：#{@order.date_of_payment}" %>
       <% end %>
     </div>
     <div class="order_user">共同購入者：

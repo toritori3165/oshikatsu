@@ -1,17 +1,15 @@
  <%#公演%>
- <%= month_calendar(events: orders_b) do |date, orders| %>
-
+<%= month_calendar(events: orders_b) do |date, orders| %>
 
     <%= date.day %>
-
     <% orders.each do |order| %>
-        <%= link_to order.group, order_path(order.id), data: { turbo: false }, class: "order_path_btn" %>
-        <p><%= order.price%></p>
-        <p><%= order.event_name%></p>
-        <p><% order.order_users.reject { |order_user| order_user.user == current_user }.each do |order_user| %>
+      <%= link_to order.group, order_path(order.id), data: { turbo: false }, class: "order_path_btn" %>
+      <p><%= order.price%></p>
+      <p><%= order.event_name%></p>
+      <p>
+        <% order.order_users.reject { |order_user| order_user.user == current_user }.each do |order_user| %>
           <%= order_user.user.nickname %>
         <% end %>
-        </p>
+      </p>
     <% end %>
-
-  <% end %>
+<% end %>
