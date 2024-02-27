@@ -27,12 +27,15 @@ __・__ indexページの上部からグループ名で購入品の検索をす�
 友人数人が推し活をする上でスケジュールや複数人で購入した商品のお金の管理が大変だと聞いたので、その問題を解決できるアプリケーションを開発することにした。
 # 実装した機能についての画像やGIFおよびその説明
 __・__ カレンダー変更機能
+
 チェックボックスでカレンダーの切り替えをする。
 [![Image from Gyazo](https://i.gyazo.com/eb62bba8506dcf5f3b1a271062ebaf7c.gif)](https://gyazo.com/eb62bba8506dcf5f3b1a271062ebaf7c)
 __・__ 購入機能
+
 購入品の追加をする。商品名と公演日のどちらかの入力でカレンダーAとBに予定を振り分けるので、商品名と公演日はどちらか一方にしか入力できない。
 [![Image from Gyazo](https://i.gyazo.com/4112ca937cd3905c038ed5310a0865fc.gif)](https://gyazo.com/4112ca937cd3905c038ed5310a0865fc)
 __・__ 検索機能
+
 グループ名で検索することができる。
 [![Image from Gyazo](https://i.gyazo.com/1a355f7ffffb6afe7b2fadf10d328432.gif)](https://gyazo.com/1a355f7ffffb6afe7b2fadf10d328432)
 
@@ -78,11 +81,13 @@ ruby on rails
 java script
 
 # ローカルでの動作方法
-アプリケーションをクローン
+__・__ アプリケーションをクローン
 % git clone https://github.com/toritori3165/oshikatsu.git
-クローンしたアプリに移動
+
+__・__ クローンしたアプリに移動
 % cd oshikatsu
-Gemをインストール
+
+__・__ Gemをインストール
 % bundle install
 
 # 工夫したポイント	
